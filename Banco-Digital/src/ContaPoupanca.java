@@ -1,10 +1,13 @@
 
 public class ContaPoupanca extends Conta {
+	
+	public ContaPoupanca(Cliente cliente) {
+		super(cliente);
+	}
 
-	private static final int SEQUENCIAL = 1;
-
-	public ContaPoupanca() {
-		super.agencia = Conta.AGENCIA_PADRAO;
-		super.numero = SEQUENCIAL++;
+	@Override
+	public void imprimirExtrato() {
+		System.out.println("=== Extrato Conta Poupança ===");
+		super.imprimirInfosComuns();
 	}
 }
