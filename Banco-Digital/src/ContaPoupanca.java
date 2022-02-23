@@ -1,19 +1,10 @@
 
-public class ContaPoupanca {
-	
-	private int agencia;
-	private int numero;
-	private double saldo;
-	
-	public void sacar() {
-		
-	}
-	
-	public void depositar() {
-		
-	}
-	
-	public void transferir() {
-		
+public class ContaPoupanca extends Conta {
+
+	private static final int SEQUENCIAL = 1;
+
+	public ContaPoupanca() {
+		super.agencia = Conta.AGENCIA_PADRAO;
+		super.numero = SEQUENCIAL++;
 	}
 }
